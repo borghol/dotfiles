@@ -48,7 +48,7 @@ vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Open the current file in the default program
-vim.keymap.set("n", "<leader>x", ":!open %<cr><cr>")
+vim.keymap.set("n", "<leader>o", ":!open %<cr><cr>")
 
 -- Stay in indent modw
 vim.keymap.set("v", "<", "<gv")
@@ -62,3 +62,5 @@ vim.keymap.set("n", "gf", ":edit <cfile><cr>")
 
 -- exit buffer
 vim.keymap.set("n", "<leader>q", ":Bdelete<cr>")
+
+vim.keymap.set("n", "<leader>fp", "<cmd>silent !tmux neww tmux-sessionizer<CR>")

@@ -25,7 +25,11 @@ local on_attach = function(client, bufnr)
 
 	vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end, opts)
 	vim.keymap.set("n", "<leader>ac", function() vim.lsp.buf.code_action() end, opts)
+	vim.keymap.set("n", "<leader>aa", function() vim.lsp.buf.code_action() end, opts)
 	vim.keymap.set("n", "<leader>af", function() vim.lsp.buf.format { async = true } end, opts)
+
+  vim.keymap.set("n", "<leader>aj", function() vim.diagnostic.goto_next() end, opts)
+  vim.keymap.set("n", "<leader>ak", function() vim.diagnostic.goto_prev() end, opts)
 
 end
 

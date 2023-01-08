@@ -9,6 +9,7 @@ return require('packer').startup(function(use)
   }
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   use 'nvim-treesitter/playground'
+  use 'nvim-treesitter/nvim-treesitter-context'
   use 'theprimeagen/harpoon'
   use "ellisonleao/gruvbox.nvim"
   use 'mbbill/undotree'
@@ -35,6 +36,7 @@ return require('packer').startup(function(use)
     }
   }
 
+  use 'sainnhe/gruvbox-material'
 
   use {
     "windwp/nvim-autopairs",
@@ -61,6 +63,8 @@ return require('packer').startup(function(use)
   use 'tpope/vim-repeat'
   use 'vim-test/vim-test'
   use 'vimwiki/vimwiki'
+  use 'kdheepak/lazygit.nvim'
+
   use {
     'iamcco/markdown-preview.nvim',
     run = function() vim.fn['mkdp#util#install']() end,
@@ -77,6 +81,13 @@ return require('packer').startup(function(use)
       "MunifTanjim/nui.nvim",
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope.nvim"
+    }
+  })
+
+  use({
+    "jose-elias-alvarez/null-ls.nvim",
+    requires = {
+      "nvim-lua/plenary.nvim"
     }
   })
 
